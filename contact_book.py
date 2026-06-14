@@ -19,14 +19,14 @@ def load_contacts():
 contacts = {}
 
 def add_contact():
-    while True:                      # loop starts here
+    while True:                      
         name = input("Enter contact name: ")
-        try:                         # ← inside while ✅
+        try:                         
             phone_number = int(input("Enter phone number: "))
-            contacts[name] = phone_number  # ← contacts not contact ✅
+            contacts[name] = phone_number  
             print(f"{name} added successfully!")
             save_contacts()
-            break                    # ← inside while ✅
+            break                    
         except ValueError:
             print("Please enter integers only. Try again!")
 print(contacts)
